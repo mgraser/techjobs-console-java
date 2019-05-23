@@ -44,9 +44,19 @@ public class TechJobs {
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
+                    ArrayList<String> items = new ArrayList<>();
                     for (String item : results) {
-                        System.out.println(item);
+                        items.add(item);
                     }
+
+                    Collections.sort(items);
+
+                    System.out.println(items);
+
+                    for (String each : items) {
+                        System.out.println(each);
+                    }
+
                 }
 
             } else { // choice is "search"
